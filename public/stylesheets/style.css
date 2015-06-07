@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -23,11 +22,15 @@ section > div {
   padding: 20px;
 }
 
-header,
+header {
+  background: #eee;
+  text-align: center;
+}
+
 nav,
 section {
   background: #eee;
-  text-align: center;
+  text-align: left;
 }
 
 footer {
