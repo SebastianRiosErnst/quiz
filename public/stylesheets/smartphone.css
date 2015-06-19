@@ -1,6 +1,5 @@
 body {
   background: #333;
-  font-size: xx-lage;
 }
 
 #page-wrap:after {
@@ -8,11 +7,20 @@ body {
 }
 
 h2 span,
-section h3 {
+section h3,
+label.rem {
   display: none;
 }
 
-footer,
-input {
+body {
+  font-size: xx-large;
+}
+
+input,
+button {
+  font-size: x-large;
+}
+
+footer {
   font-size: large;
 }
