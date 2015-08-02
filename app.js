@@ -29,6 +29,16 @@ app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Temporizador Auto-Logout de sesión
+app.use(function (req, res, next) {
+  var tiempo = 120000; // Equivalente a 2 minutos
+  if (req.session.cookie) {
+    req.session.cookie.expires = new Date(Date.now() + tiempo);
+    req.session.cookie.maxAge = tiempo;
+  }
+  next();
+});
+
 // Helpers dinamicos:
 app.use(function (req, res, next) {
 
